@@ -7,15 +7,16 @@
  */
 int main(void)
 {
-	int start = 1, end = 100;
+	int start = 1;
+	int end = 100;
 
 	while (start <= 100)
 	{
-		if (start % 3 == 0)
+		if ((start % 3) == 0)
 			printf("Fizz");
-		if (start % 5 == 0)
+		if ((start % 5) == 0)
 			printf("Buzz");
-		if (start % 3 != 0 && Start % 5 != 0)
+		if (((start % 3) != 0) && (((start % 5) != 0)))
 			printf("%d", start);
 
 		putchar(start == end ? '\n' : ' ');

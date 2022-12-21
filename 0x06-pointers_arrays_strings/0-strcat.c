@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * strcat - concancates string pointed to by @src
+ * _strcat - concancates string pointed to by @src
  * @dest: pointer to string to be concancated upon
  * @src: pointer to sjtring to be appended to @dest
  * Return: pointer to destination string @dest
@@ -14,8 +14,7 @@ char *_strcat(char *dest, char *src)
 		dest_len++;
 
 	for (index = 0; src[index]; index++)
-	{
 		dest[dest_len++] = src[index];
-	}
+
 	return (dest);
 }

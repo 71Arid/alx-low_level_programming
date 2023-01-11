@@ -4,7 +4,7 @@
  * @n: number to get factorial
  * Return: -1 if n < 0 and 1 if n = 0
  */
-int factorial(int n);
+int factorial(int n)
 {
 	if (n == 0)
 		return (1);

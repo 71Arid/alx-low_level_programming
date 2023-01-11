@@ -11,7 +11,7 @@ int is_divisible(int num, int div)
 {
 	if (div < num)
 	{
-		if (num % i == 0)
+		if (num % div == 0)
 			return (0);
 		else
 			return (is_divisible(num, div + 1));

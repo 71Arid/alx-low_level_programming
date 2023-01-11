@@ -24,6 +24,8 @@ int find_sqrt(int num, int root)
  */
 int _sqrt_recursion(int n)
 {
+	int root;
+
 	if (n < 0)
 		return (-1);
 	if (n == 1)

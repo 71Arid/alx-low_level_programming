@@ -9,13 +9,17 @@ int is_divisible(int num, int div);
  */
 int is_divisible(int num, int div)
 {
-	if (num % div == 0)
+	if (div < num)
+	{
+		if (num % i == 0)
+			return (0);
+		else
+			return (is_divisible(num, div + 1));
+	}
+	else
+	{
 		return (1);
-
-	if (div == num / 2)
-		return (0);
-
-	return (is_divisible(num, div + 1));
+	}
 }
 
 /**

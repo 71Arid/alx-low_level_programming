@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *str_concant - concancates two strings
+ * *str_concat - concancates two strings
  * @s1: first string
  * @s2: second string
  * Return: pointer if yes NULL if no
@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[ci] != '\0')
 		ci++;
 
-	as = malloc(sizeof(char) * (i + ci + i));
+	as = malloc(sizeof(char) * (i + ci + 1));
 
 	if (as == NULL)
 		return (NULL);

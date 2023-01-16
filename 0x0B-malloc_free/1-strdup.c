@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * *_strdup - returns pointer to newely allocated space in memory
  * @str: the string
@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	p = malloc(sizeof(char) * (i + 1));
 
 	if (p == NULL)
-		return (NULL):
+		return (NULL);
 	
 	p = 0;
 

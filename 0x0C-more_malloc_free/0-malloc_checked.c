@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#in
 /**
  * *malloc_checked - allocates memory
  * @b: size to be allocated
@@ -12,7 +13,12 @@ void *malloc_checked(unsigned int b)
 	p = malloc(b);
 
 	if (p == NULL)
-		return (98);
+	{
+		_putchar(98);
+		return (NULL);
+	}
 	else
+	{
 		return (p);
+	}
 }

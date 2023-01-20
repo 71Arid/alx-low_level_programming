@@ -7,20 +7,20 @@
  */
 void print_dog(struct dog *d)
 {
-	if (p == NULL)
+	if (d == NULL)
 		return;
 
-	if (p->name != NULL)
+	if (d->name != NULL)
 		printf("Name: %s\n", p->name);
 	else
 		printf("Name: (nil)\n");
 
-	if (p->age != NULL)
+	if (d->age != NULL)
 		printf("Age: %d\n", p->age);
 	else
 		printf("Age: (nil)\n");
 
-	if (p->owner != NULL)
+	if (d->owner != NULL)
 		printf("Owner: %s\n", p->owner);
 	else
 		printf("Owner: (nil)\n");

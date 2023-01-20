@@ -30,7 +30,7 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * *new_day - creates new dog
+ * *new_dog - creates new dog
  * @name: dog name
  * @age: dog age
  * @owner: dog owner

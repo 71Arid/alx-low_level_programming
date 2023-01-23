@@ -7,11 +7,11 @@
  *@argv: array of arguments
  *Return: always 0
  */
-int main(__attribute__((unused))int argc, __attribute__((unused))char *argv[])
+int main(int argc, char **argv)
 {
 	int argv1, argv2, result;
 	char o;
-	int (*func)(char *);
+	int (*func(char *))(int, int);
 
 	if (argc != 4)
 	{

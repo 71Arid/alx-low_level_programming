@@ -7,8 +7,12 @@
  *@argv: array of arguments
  *Return: always 0
  */
-int main(int argc, int *argv[])
+int main(__attribute__((unused))int argc, __attribute__((unused))char *argv[])
 {
+	int argv1, argv2, result;
+	char o;
+	int (*func)(char *);
+
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -27,14 +31,13 @@ int main(int argc, int *argv[])
 	}
 
 	o = *argv[2];
-
-	if ((o == "/" || o == "%") && arg2 == 0)
+	if ((o == "/" || o == "%") && argv2 == 0)
 	{
 		printf("Error\n");
 		exit (100);
 	}
 
-	result = func(arg1, arg2);
+	result = func(argv1, argv2);
 	printf("%d\n", result);
 	return (0);
 }

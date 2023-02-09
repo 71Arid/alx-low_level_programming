@@ -32,6 +32,7 @@ typedef struct listp_s
 	struct listp_s *next;
 } listp_t;
 
+void free_listp2(listp_t **head);
 void free_listp(listp_t **head);
 int _putchar(char c);
 size_t print_listint(const listint_t *h);

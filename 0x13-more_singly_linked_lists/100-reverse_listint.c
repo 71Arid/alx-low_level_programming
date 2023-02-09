@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "lists.h"
-#include <stdlib.h>
 /**
  * reverse_listint - reverse listint_t
  * @head: pointer to pointer to struct
@@ -9,15 +7,14 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *previous = NULL;
-	listint_t *current = *head;
+	listint_t *next = NULL;
 
-	while (current != NULL)
+	while (*head != NULL)
 	{
-		listint_t *next = current->next;
-
-		current->next = previous;
-		previous = current;
-		current = next;
+		next = (*head)->next;
+		(*head)->next = previous;
+		previous = *head;
+		*head = next;
 	}
 	*head = previous;
 	return (*head);

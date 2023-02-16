@@ -9,13 +9,13 @@
   * @argv: argument
   * Return: Always 0
   */
-int main(int argc, int **argv)
+int main(int argc, char **argv)
 {
 	int from, to , on_close, w, r;
 	char buffer[1024];
 
 	if (argc != 3)
-		dprint(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (to == -1)
 		dprintf(STDERR_FILENO, WRITE_ERR, argv[2]), exit(99);

@@ -15,7 +15,7 @@
   */
 int main(int argc, char **argv)
 {
-	int from, to , on_close, w, r;
+	int from, to, on_close, w, r;
 	char buffer[1024];
 
 	if (argc != 3)

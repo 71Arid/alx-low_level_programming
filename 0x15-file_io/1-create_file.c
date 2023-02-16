@@ -4,14 +4,21 @@
 #include "main.h"
 /**
  * _strlen - len
- * @s: pointer to a char
- * Return: Always 0
+ *
+ * @s: is a pointer to a char
+ *
+ * Return: Always 0.
  */
+
 int _strlen(const char *s)
 {
 	int i = 0;
-	while (*s)
+
+	while (*(s + i) != '\0')
+	{
 		i++;
+	}
+
 	return (i);
 }
 /**
@@ -35,7 +42,7 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 	{
 		close(fd);
-		return (-1);
+		return (1);
 	}
 	size = _strlen(text_content);
 	mem = malloc(sizeof(char) * size);

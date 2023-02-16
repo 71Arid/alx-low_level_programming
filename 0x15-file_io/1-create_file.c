@@ -24,7 +24,7 @@ int _strlen(const char *s)
 /**
  * create_file - creates a file
  * @filename: path to file
- * @text_context: content
+ * @text_content: content
  * Return: chars read
  */
 int create_file(const char *filename, char *text_content)

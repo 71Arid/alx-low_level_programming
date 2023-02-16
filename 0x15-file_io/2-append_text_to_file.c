@@ -3,11 +3,30 @@
 #include <fcntl.h>
 #include "main.h"
 /**
-  * append_text_to_file - appends text at end of file
-  * @filename: path to file
-  * @text_content: content to be appended
-  * Return: 1 on success -1 on failure
-  */
+ * _strlen - len
+ *
+ * @s: is a pointer to a char
+ *
+ * Return: Always 0.
+ */
+
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+
+	return (i);
+}
+/**
+ * append_text_to_file - appends text at end of file
+ * @filename: path to file
+ * @text_content: content to be appended
+ * Return: 1 on success -1 on failure
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;

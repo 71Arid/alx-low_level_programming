@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	{
 		r = read(from, buffer, 1024);
 		if (r == -1)
-			dprint(STDERR_FILENO, READ_ERR, argv[1]), exit(98);
+			dprintf(STDERR_FILENO, READ_ERR, argv[1]), exit(98);
 		if (r > 0)
 		{
 			w = write(to, buffer, r);

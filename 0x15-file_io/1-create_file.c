@@ -3,11 +3,23 @@
 #include <fcntl.h>
 #include "main.h"
 /**
-  * create_file - creates a file
-  * @filename: path to file
-  * @text_context: content
-  * Return: chars read
-  */
+ * _strlen - len
+ * @s: pointer to a char
+ * Return: Always 0
+ */
+int _strlen(const char *s)
+{
+	int i = 0;
+	while (*s)
+		i++;
+	return (i);
+}
+/**
+ * create_file - creates a file
+ * @filename: path to file
+ * @text_context: content
+ * Return: chars read
+ */
 int create_file(const char *filename, char *text_content)
 {
 	int fd;

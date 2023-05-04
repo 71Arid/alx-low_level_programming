@@ -14,7 +14,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (!ht)
 		return;
 
-	print("{");
+	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		bucket = ht->array[i];
@@ -27,5 +27,5 @@ void hash_table_print(const hash_table_t *ht)
 			bucket = bucket->next;
 		}
 	}
-	print("}\n");
+	printf("}\n");
 }

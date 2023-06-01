@@ -14,9 +14,4 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 recompile:
-	@for file in $(filter-out $(OBJ), $(wildcard *.c)); do \
-		if test $$file -nt $${file%.c}.o; then \
-			echo "Recompiling $$file"; \
-			$(CC) -c $$file -o $${file%.c}.o; \
-		fi \
-	done
+	$(MAKE) $(filter %.o,$(shell $(CC) -MM $(SRC)))

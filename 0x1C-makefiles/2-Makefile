@@ -13,5 +13,8 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) -c $< -o $@
 
-.SECONDEXPANSION:
-	all: | $(SRC)
+all:
+	$(MAKE) -s -f .makefile.tmp
+
+.makefile.tmp: $(SRC)
+	touch $@

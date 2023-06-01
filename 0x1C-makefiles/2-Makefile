@@ -10,8 +10,13 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
 
-main.o: main.c
-	$(CC) -c main.c -o main.o
+%.o: %.c
+	$(CC) -c $< -o $@
 
-school.o: school.c
-	$(CC) -c school.c -o school.o
+recompile:
+	@for file in $(filter-out $(OBJ), $(wildcard *.c)); do \
+		if test $$file -nt $${file%.c}.o; then \
+			echo "Recompiling $$file"; \
+			$(CC) -c $$file -o $${file%.c}.o; \
+		fi \
+	done

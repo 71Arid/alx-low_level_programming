@@ -14,5 +14,4 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 .SECONDEXPANSION:
-
-all: | $(SRC)
+	all: | $(SRC)

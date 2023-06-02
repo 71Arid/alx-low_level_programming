@@ -8,13 +8,17 @@ def island_perimeter(grid):
     0 water zone
     1 land zone
     """
+    perimeter = 0
     rows = len(grid)
-    column = len(grid[0])
-
-    perimeter = 2 * (rows + column)
+    cols = len(grid[0])
 
     for i in range(rows):
-        for j in range(column):
+        for j in range(cols):
             if grid[i][j] == 1:
-                perimeter -= 2
+                perimeter += 4
+                if i > 0 and grid[i - 1][j] == 1:
+                    perimeter -= 2
+                if j > 0 and grid[i][j - 1] == 1:
+                    perimeter -= 2
+
     return perimeter

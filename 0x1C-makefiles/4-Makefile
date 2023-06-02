@@ -10,10 +10,10 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(NAME)
 
 $(NAME): $(OBJ)
-        $(CC) $(CFLAGS) $^ -o $@
+        $(CC) $^ -o $@
 
 %.o: %.c
-        $(CC) $(CFLAGS) -c $< -o $@
+        $(CC) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ) $(NAME)
